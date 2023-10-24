@@ -1,0 +1,50 @@
+@import "../../styles/themes/light-theme.scss";
+
+.newTask {
+  align-self: baseline;
+  align-items: center;
+  display: flex;
+  background-color: var(--newTaskBackground);
+  position: sticky;
+  top: 8px;
+  backdrop-filter: blur(5px);
+  button {
+    margin: 8px;
+    margin-left: 4px;
+    width: 48px;
+  }
+  @media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.input {
+  display: grid;
+  padding: 0px;
+  border: none;
+  width: 100%;
+  margin: 8px;
+  margin-right: 4px;
+  height: 48px !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  background: none;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+.button {
+  @include iconButton(var(--textColor));
+  color: red !important;
+  background: none;
+}
+
+.icon{
+  fill: var(--textColor); /* Cambia el color del icono al rojo */
+  width: 24px; /* Puedes ajustar el tamaño según tus necesidades */
+  height: 24px;
+}

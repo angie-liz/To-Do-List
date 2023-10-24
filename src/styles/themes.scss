@@ -1,0 +1,33 @@
+// --negro: rgba(34,34,34,1);
+// --negro20: rgba(34,34,34,0.2);
+// --negro10: rgba(34,34,34,0.1);
+// --blanco: rgba(255,255,255,1);
+// --blanco50: rgba(255,255,255,0.5);
+// --blanco20: rgba(255,255,255,0.2);
+
+.light{
+    --bodyBackground: rgba(255,255,255,1);
+    --newTaskBackground: rgba(34,34,34,0.1);
+    --taskBackground: rgba(34,34,34,0.2);
+    --textColor: rgba(34,34,34,1);
+
+    --changeSvg: url('../assets/images/focus.svg');
+    --checkSVG: url('../assets/images/checkTask.svg');
+    --clipboardSVG: url('../assets/images/clipboard.svg');
+    --shareSVG: url('../assets/images/share.svg');
+    --trashSVG: url('../assets/images/trash.svg');
+
+}
+
+.dark{
+    --bodyBackground: rgba(34,34,34,1);
+    --newTaskBackground: rgba(255,255,255,0.2);
+    --taskBackground: rgba(255,255,255,0.5);
+    --textColor: rgba(255,255,255,1);
+
+    --changeSvg: url('../assets/images/focusDark.svg');
+    --checkSVG: url('../assets/images/checkTaskDark.svg');
+    --clipboardSVG: url('../assets/images/clipboardDark.svg');
+    --shareSVG: url('../assets/images/shareDark.svg');
+    --trashSVG: url('../assets/images/trashDark.svg');
+}

@@ -1,0 +1,7 @@
+@import '../../styles/mixins.scss';
+
+.button{
+    @include iconButton(var(--textColor));
+    margin: 8px;
+    background: var(--changeSvg) no-repeat center;
+}

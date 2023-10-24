@@ -1,5 +1,5 @@
-import Task from '../Task/Task.jsx';
-import '../../styles/App.css'
+import Task from './Task';
+import styles from './styles.module.scss'
 
 function TaskList(props){
 
@@ -9,7 +9,7 @@ function TaskList(props){
     }
 
     const taskItems = props.tasks.map(
-        task => <Task key={task.id} id={task.id} value={task.value} onDeleteTask={deleteTask}/>
+        task => <Task key={task.id} id={task.id} value={task.value} onDeleteTask={deleteTask} theme={props.theme}/>
     )
 
     let reversersedTaks = taskItems.reverse();
@@ -20,7 +20,7 @@ function TaskList(props){
         )
     }else{
         return(
-            <div className='taskList'>
+            <div className={ `${styles.taskList} ${props.theme}`}>
               {reversersedTaks}
             </div>
         )

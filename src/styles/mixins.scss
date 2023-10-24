@@ -1,0 +1,45 @@
+@mixin button($color){
+    background-color: none;
+    height: 48px;
+    padding: 8px 16px;
+    color: $color;
+    border: solid 1px $color;
+    cursor: pointer;
+    &.text{
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        font: 'Roboto', sans-serif 24px;
+    }
+    &.icon{
+        font: 'Roboto', sans-serif 24px;
+        width: 48px;
+        padding: 8px;
+        text-align: center;
+        line-height: 16px;
+    }
+}
+
+
+@mixin textButton($color){
+    @include button($color);
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    font: 'Roboto', sans-serif 24px;
+}
+@mixin iconButton($color){
+    @include button($color);
+    font: 'Roboto', sans-serif 24px;
+    width: 48px;
+    padding: 8px !important;
+    text-align: center;
+    line-height: 16px;
+}
+@mixin iconTextButton($color){
+    @include button($color);
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    font: 'Roboto', sans-serif 24px;
+}

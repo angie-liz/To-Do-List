@@ -1,0 +1,12 @@
+@import "../../styles/themes/light-theme.scss";
+
+.divider{
+    border-top: 2px solid $textColor;
+    width: 100vh;
+    max-width: 512px;
+    @media screen and (max-width: 768px) {
+        /* Estilos para pantallas más pequeñas */
+        width: 100%;
+        max-width: 100%;
+      }
+}

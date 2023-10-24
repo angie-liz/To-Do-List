@@ -1,9 +1,10 @@
-import './styles/App.css'
-import { useState } from 'react'
-import TaskList  from './components/TaskList/TaskList'
-import './components/Radio/Radio'
-import Radio from './components/Radio/Radio'
-import NewTask  from './components/NewTask/NewTask'
+import styles from './styles/styles.module.scss'
+import { Fragment, useState } from 'react'
+import TaskList  from './components/TaskList'
+import NewTask  from './components/NewTask'
+import Divider from './components/Divider'
+import ButtonChange from './components/ButtonChange'
+import './styles/themes.scss';
 
 function App() {
 
@@ -22,15 +23,27 @@ function App() {
     setTasks(newTaskList);
   }
 
+  const [theme, setTheme] = useState('dark');
+
+  function changeTheme(){
+    if(theme == 'light'){
+      setTheme(`dark`);
+    } else {
+      setTheme('light');
+    }
+  }
+
+
   return (
-    <>
-      <Radio/>
-      <main>
-        <header>Angie's To-Do List</header>
-        <NewTask onAddTask={addTask} />
-        <TaskList tasks={tasks} action={deleteTask}/>
+      <main className={`${theme} ${styles.main}`}>
+        <div className={styles.header}>
+        <header>ToDo List</header>
+        <ButtonChange onClick={changeTheme} theme={theme}></ButtonChange>
+        </div>
+        <NewTask onAddTask={addTask} theme={theme}/>
+        <Divider></Divider>
+        <TaskList tasks={tasks} action={deleteTask} theme={theme} />
       </main>
-    </>
   )
 }
 
