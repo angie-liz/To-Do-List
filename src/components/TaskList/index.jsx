@@ -9,7 +9,7 @@ function TaskList(props){
     }
 
     const taskItems = props.tasks.map(
-        task => <Task key={task.id} id={task.id} value={task.value} onDeleteTask={deleteTask} theme={props.theme}/>
+        task => <Task key={task.id} id={task.id} value={task.value} complete={task.complete} onDeleteTask={deleteTask} theme={props.theme}/>
     )
 
     let reversersedTaks = taskItems.reverse();

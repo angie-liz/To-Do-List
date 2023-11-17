@@ -14,7 +14,7 @@ function App() {
   ]);
 
   function addTask(newTask) {
-    const newTasks = [...tasks, { id: Date.now(), value: newTask }];
+    const newTasks = [...tasks, { id: Date.now(), value: newTask, complete: false }];
     setTasks(newTasks);
   }
 

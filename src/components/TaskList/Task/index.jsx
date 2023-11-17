@@ -11,7 +11,7 @@ function Task(props){
         <div className={`${styles.task} ${props.theme}`}>
             <div className={styles.checkLabel}>
             
-            <input type="checkbox" className={`${styles.check} ${props.theme}`}/>
+            <input type="checkbox" checked={props.complete} className={`${styles.check} ${props.theme}`}/>
             <label className={`${styles.label} ${props.theme}`}>{props.value} </label>
             </div>
             <div className={styles.buttons}>
